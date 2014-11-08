@@ -22,7 +22,7 @@ function varargout = match(varargin)
 
 % Edit the above text to modify the response to help match
 
-% Last Modified by GUIDE v2.5 08-Nov-2014 03:21:47
+% Last Modified by GUIDE v2.5 09-Nov-2014 01:32:18
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -137,6 +137,7 @@ function pushbutton3_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 url = 'http://localhost:8080/salman/index.html';
 web(url);
+users;
 
 
 % --- Executes during object creation, after setting all properties.
@@ -153,3 +154,17 @@ web(url);
 % hObject    handle to pushbutton3 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
+
+
+% --- Executes during object creation, after setting all properties.
+function axes4_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to axes4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: place code in OpeningFcn to populate axes4
+handles.output = hObject;
+ah=axes('unit','normalized','position',[0 0 1 1]);
+bg=imread('like.jpg');
+imagesc(bg);
+set(ah, 'handlevisibility','off','visible','off');

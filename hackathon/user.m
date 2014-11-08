@@ -22,7 +22,7 @@ function varargout = user(varargin)
 
 % Edit the above text to modify the response to help user
 
-% Last Modified by GUIDE v2.5 08-Nov-2014 19:36:18
+% Last Modified by GUIDE v2.5 09-Nov-2014 01:15:57
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -99,3 +99,16 @@ function pushbutton4_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton4 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes during object creation, after setting all properties.
+function axes1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to axes1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+handles.output = hObject;
+ah=axes('unit','normalized','position',[0 0 1 1]);
+bg=imread('img.jpg');
+imagesc(bg);
+set(ah, 'handlevisibility','off','visible','off');
+% Hint: place code in OpeningFcn to populate axes1

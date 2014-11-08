@@ -22,7 +22,7 @@ function varargout = nomatch(varargin)
 
 % Edit the above text to modify the response to help nomatch
 
-% Last Modified by GUIDE v2.5 01-May-2013 00:32:59
+% Last Modified by GUIDE v2.5 09-Nov-2014 01:32:02
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -80,3 +80,17 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 main;
 close(handles.figure1);
+
+
+% --- Executes during object creation, after setting all properties.
+function axes1_CreateFcn(hObject, eventdata, handles)
+handles.output = hObject;
+ah=axes('unit','normalized','position',[0 0 1 1]);
+bg=imread('dislike.jpg');
+imagesc(bg);
+set(ah, 'handlevisibility','off','visible','off');
+% hObject    handle to axes1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: place code in OpeningFcn to populate axes1

@@ -22,7 +22,7 @@ function varargout = auth(varargin)
 
 % Edit the above text to modify the response to help auth
 
-% Last Modified by GUIDE v2.5 03-May-2013 00:50:33
+% Last Modified by GUIDE v2.5 09-Nov-2014 02:40:55
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -128,7 +128,7 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 uname=get(handles.edit1,'UserData');
 psw=get(handles.edit2,'UserData');
-if(strcmp(uname,'admin') && strcmp(psw,'admin123'))
+if(strcmp(uname,'admin') && strcmp(psw,'123'))
     admi;
 else
     fail;
